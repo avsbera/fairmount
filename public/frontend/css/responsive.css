@@ -1,0 +1,301 @@
+/*===============================mobile devices======================================*/
+@media screen and (max-width: 991px) {
+	.pstbtn_jdesign {
+		width: 122px;
+		height: 28px;
+	}
+
+	.menulast_itembox {
+		flex: 0 0 30%;
+		margin: 7px 0px 0px 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	.dashboard-header {
+		padding: 1rem 0;
+	}
+
+	.progressbar-text-center {
+		text-align: center;
+	}
+
+	.stats-icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	.custom-profile-card {
+		text-align: center;
+		padding: 1.5rem;
+	}
+
+	.custom-profile-card .profile-image {
+		margin-bottom: 1rem;
+	}
+
+	.career-grid {
+		grid-template-columns: 1fr !important;
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	.header {
+		position: relative;
+	}
+
+	.mobile_menudesign {
+		position: relative;
+		top: -30px;
+		right: -80%;
+	}
+
+	.sitelogo_imgdesign {
+		width: 100px;
+	}
+
+	.menulast_itembox {
+		flex: 0 0 60%;
+	}
+
+	.pstbtn_jdesign {
+		width: 95px;
+		height: 35px;
+		margin: 0px 0px 0px 7px;
+		font-size: 12px;
+	}
+
+	.mainnav_outsection {
+		padding: 7px 0px 0px 0px;
+	}
+
+	.wtgtext_design {
+		font-size: 25px;
+		width: 100%;
+	}
+
+	.emmtext_design {
+		width: 100%;
+		font-size: 13px;
+	}
+
+	.srjobbox_outarea {
+		height: auto;
+	}
+
+	.jtcbox_outarea {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.ppsearch_outarea {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.pches_textdesign {
+		font-size: 12px;
+	}
+
+	.ppasrch_textdesign {
+		padding: 10px 20px;
+		font-size: 12px;
+		margin: 0px 0px 10px 0px;
+		display: inline-block;
+	}
+
+	.bannerright_fstoutarea {
+		margin: 10px 0px 20px 0px;
+	}
+
+	.union-icon {
+		top: 0%;
+		left: 0px;
+	}
+
+	.congratulation-icon {
+		top: 82%;
+		left: -52px;
+	}
+
+	.aboutus_outarea {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.rightaboutus_outarea {
+		padding: 30px 0px 0px 0px;
+	}
+
+	.auscb_textdesign {
+		font-size: 20px;
+		padding: 0px 0px 0px 20px;
+	}
+
+	.adfcx_sktextdesign {
+		font-size: 14px;
+		line-height: 20px;
+		padding: 10px 0px 0px 20px;
+	}
+
+	.lstfire_mainareapolx {
+		padding: 0px 0px 0px 20px;
+	}
+
+	.lstfire_mainareapolx img {
+		width: 20px;
+		height: 20px;
+	}
+
+	.lstfire_mainareapolx span {
+		font-size: 13px;
+	}
+
+	.abbox_outarea {
+		margin: 20px 0px 0px 20px;
+	}
+
+	.ppxg_texydesign {
+		font-size: 25px;
+	}
+
+	.exlife_outsection {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.exlife_boxsectionj {
+		padding: 20px 0px 0px 0px;
+	}
+
+	.hgfcx_ikbn {
+		font-size: 18px;
+	}
+
+	.okbvc_ptextdesign {
+		font-size: 13px;
+		padding: 15px 0px 0px 0px;
+	}
+
+	.exright_outsection {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.jactj_textdesign {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.ftrue_textdesign {
+		padding: 10px 0px 30px 0px;
+	}
+
+	.ftrue_textdesign {
+		font-size: 20px;
+	}
+
+	.jactj_textdesign1 {
+		font-size: 15px;
+		padding: 20px 0px 0px 0px;
+	}
+
+	.ftrue_textdesign1 {
+		font-size: 25px;
+		padding: 10px 0px 20px 0px;
+	}
+
+	.inboxsgt_outsection {
+		margin: 0px 0px 20px 0px;
+	}
+
+	.newsletter_outsection {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.jetbx_textdesign {
+		padding: 0px 0px 20px 0px;
+		font-size: 15px;
+	}
+
+	.snwbtn_design {
+		width: 120px;
+		font-size: 12px;
+		right: 6%;
+	}
+
+	.rgtinput_boxtext {
+		font-size: 12px;
+	}
+
+	.footerdxlogo_design {
+		width: 130px;
+	}
+
+	.footerleft_jxoutsection {
+		margin: 20px 0px 20px 0px;
+	}
+
+	.footermidfc_jxoutsection {
+		margin: 20px 0px 20px 0px;
+	}
+
+	.lastcontent_outsection {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.clntesti_outsection {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.jactj_textdesign {
+		padding: 0px 0px 0px 0px;
+	}
+
+	.jkabot_outarea {
+		width: 60px;
+		height: 60px;
+		padding: 13px 0px 0px 0px;
+	}
+
+	.fnumberx_text {
+		font-size: 35px;
+	}
+
+	.fnumberx_text1 {
+		font-size: 35px;
+	}
+
+	.jkabot_outarea2 {
+		width: 60px;
+		height: 60px;
+		padding: 13px 0px 0px 0px;
+	}
+
+	.jkertg_icondesign {
+		width: 35px;
+	}
+
+	.siterlog_imgdesign {
+		width: 150px;
+	}
+
+	.ryac_txetdesign {
+		font-size: 18px;
+	}
+
+	.register_background {
+		background: #e1e0e0;
+	}
+
+	.aboutusbreadcum_mainoutsection {
+		height: 140px;
+	}
+
+	.breadcumtext_outarea {
+		margin: 40px 0px 0px 0px;
+		position: absolute;
+		left: 0px;
+	}
+
+	.connectus_outarea {
+		font-size: 40px;
+	}
+}
+
+/*===============================mobile devices======================================*/
