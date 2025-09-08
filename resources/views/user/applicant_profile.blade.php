@@ -71,11 +71,7 @@ $companyUser = Auth::guard('company')->user();
 // Check if the user's profile is complete (modify as needed)
 $cvFile = optional($user->getDefaultCv())->cv_file;
 $isProfileComplete = !empty($cvFile) && !empty($user->email) && !empty($user->phone);
-dd([
-    'cv_file' => $cvFile,
-    'email'   => $user->email,
-    'phone'   => $user->phone,
-]);
+
 
 
 if ($companyUser) {
