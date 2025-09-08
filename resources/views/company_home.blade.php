@@ -84,7 +84,7 @@
     ?>
     @if(null !== $currentPackage)
     @if(null!==($currentPackage) && !empty($currentPackage))
-{{-- <div class="instoretxt">
+<div class="instoretxt">
 
 <h3>{{__('Purchased Cvs  Package Details')}}</h3>
 <div class="table-responsive">
@@ -110,14 +110,14 @@
     </tbody>
     </table>
 </div>
-</div> --}}
+</div>
 
 
 
 
 
             @endif
-        {{-- <div class="four-plan">
+        <div class="four-plan">
             <h3>{{__('Upgrade CV Search Package')}}</h3>
             <div class="row">
                 <?php $packages = App\Package::get(); ?>
@@ -183,9 +183,9 @@
                     @endif
                 @endforeach
             </div>
-        </div> --}}
+        </div>
     @else
-        {{-- <div class="four-plan">
+        <div class="four-plan">
             <h3>{{__('CV Search Packages')}}</h3>
             <div class="row">
                 <?php $packages = App\Package::get(); ?>
@@ -255,7 +255,7 @@
                     @endif
                 @endforeach
             </div>
-        </div> --}}
+        </div>
     @endif
     <!---end four-plan-->
 </div>
