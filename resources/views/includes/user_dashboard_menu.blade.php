@@ -99,7 +99,7 @@
         <li class="{{ Request::url() == route('my.profile') ? 'active' : '' }}"><a href="{{ route('my.profile') }}"><i class="fas fa-pencil" aria-hidden="true"></i> {{__('Edit Profile')}}</a>
         </li>
         <li class="{{ Request::url() == route('build.resume') ? 'active' : '' }}"><a href="{{ route('build.resume') }}"><i class="fas fa-file" aria-hidden="true"></i> {{ __('Build Resume') }}</a></li>
-        <li><a href="{{ route('resume', Auth::user()->id) }}"><i class="fa fa-print" aria-hidden="true"></i> {{__('Download CV')}}</a></li>
+        {{-- <li><a href="{{ route('resume', Auth::user()->id) }}"><i class="fa fa-print" aria-hidden="true"></i> {{__('Download CV')}}</a></li> --}}
         <li><a href="{{ route('view.public.profile', Auth::user()->id) }}"><i class="fas fa-eye" aria-hidden="true"></i> {{__('View Public Profile')}}</a>
         </li>
         <li class="{{ Request::url() == route('my.job.applications') ? 'active' : '' }}"><a href="{{ route('my.job.applications') }}"><i class="fas fa-desktop" aria-hidden="true"></i> {{__('My Job Applications')}}</a>
