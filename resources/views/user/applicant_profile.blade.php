@@ -70,6 +70,12 @@ $companyUser = Auth::guard('company')->user();
 
 // Check if the user's profile is complete (modify as needed)
 $isProfileComplete = !empty($user->cv_file) && !empty($user->email) && !empty($user->phone);
+dd([
+    'cv_file' => $user->cv_file,
+    'email'   => $user->email,
+    'phone'   => $user->phone,
+]);
+
 
 if ($companyUser) {
     $package = $companyUser;
