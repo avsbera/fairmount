@@ -32,7 +32,8 @@ body::-webkit-scrollbar-thumb {
 .header {
   display: block;
   padding: 0px;
-  margin: 10px 0px 0px 0px;
+  margin: 0px;
+  z-index: 1040;
 }
 
 .header .item-left {
@@ -63,6 +64,13 @@ body::-webkit-scrollbar-thumb {
   display: inline-block;
   margin-left: 10px;
   transition: color 0.3s ease;
+}
+
+.primary-nav .nav-link {
+  padding: 0 .9rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: #565d66;
 }
 
 .header .menu>ul>li {
@@ -511,6 +519,31 @@ body::-webkit-scrollbar-thumb {
 }
 
 .pstbtn_jdesign i {}
+
+.nav-link {
+  color: #444444cc !important;
+  font-weight: 600 !important;
+} 
+
+/* Remove the blue line under nav links (hover/active/focus) */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active .nav-link {
+  text-decoration: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand img {
+  width: 200px !important;
+  height: auto !important;
+}
+
+.auth-login a, .auth-register a{
+  color: #000000 !important;
+}
 
 /*===================================header design========================*/
 
@@ -1381,6 +1414,7 @@ body::-webkit-scrollbar-thumb {
   text-align: justify;
   font-size: 12px;
   line-height: 20px;
+  margin-bottom: 15px;
 }
 
 .gfootersocial_plnkarea {
@@ -1414,7 +1448,7 @@ body::-webkit-scrollbar-thumb {
 .ulinks_outsection {
   color: #FFF;
   font-size: 20px;
-  margin: 0px;
+  margin-bottom: 5px;
   position: relative;
 }
 
@@ -1445,7 +1479,7 @@ body::-webkit-scrollbar-thumb {
 
 .footer_gulnksj li {
   list-style: none;
-  padding: 0px 0px 8px 0px;
+  margin-bottom: 20px;
 }
 
 .footer_gulnksj li a {
