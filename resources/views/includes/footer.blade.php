@@ -50,42 +50,24 @@
                                   </div>
                               </div>
                               <div class="col-lg-3">
-                                  <div class="footermidfc_jxoutsection">
-                                      <h2 class="ulinks_outsection">Job Categories</h2>
-                                      <ul class="footer_gulnksj">
-                                          <li>
-                                              <a href="#">
-                                                  <i class="fa-solid fa-chevron-right"></i>
-                                                  Telecommunications
-                                              </a>
-                                          </li>
-                                          <li>
-                                              <a href="#">
-                                                  <i class="fa-solid fa-chevron-right"></i>
-                                                  Software
-                                              </a>
-                                          </li>
-                                          <li>
-                                              <a href="#">
-                                                  <i class="fa-solid fa-chevron-right"></i>
-                                                  Security Analyst
-                                              </a>
-                                          </li>
-                                          <li>
-                                              <a href="#">
-                                                  <i class="fa-solid fa-chevron-right"></i>
-                                                  Market Research
-                                              </a>
-                                          </li>
-                                          <li>
-                                              <a href="#">
-                                                  <i class="fa-solid fa-chevron-right"></i>
-                                                  Education
-                                              </a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
+                                <div class="footermidfc_jxoutsection">
+                                    <h2 class="ulinks_outsection">{{__('Quick Links')}}</h2>
+                                    <!--Quick Links menu Start-->
+                                    <ul class="footer_gulnksj">
+                                        <li><a href="{{ route('index') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Home')}}</a></li>
+                                        <li><a href="{{ route('contact.us') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Contact Us')}}</a></li>
+                                        <li class="postad"><a href="{{ route('post.job') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Post a Job')}}</a></li>
+                                        <li><a href="{{ route('faq') }}"><i class="fa-solid fa-chevron-right"></i>{{__('FAQs')}}</a></li>
+                                        @foreach($show_in_footer_menu as $footer_menu)
+                                        @php
+                                        $cmsContent = App\CmsContent::getContentBySlug($footer_menu->page_slug);
+                                        @endphp
+                                        <li class="{{ Request::url() == route('cms', $footer_menu->page_slug) ? 'active' : '' }}"><a href="{{ route('cms', $footer_menu->page_slug) }}"><i class="fa-solid fa-chevron-right"></i>{{ $cmsContent->page_title }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+
                               <div class="col-lg-2">
                                   <div class="footermidfc_jxoutsection">
                                       <h2 class="ulinks_outsection">Useful Links</h2>
