@@ -1386,7 +1386,6 @@ body::-webkit-scrollbar-thumb {
 .snwbtn_design i {}
 
 .footerdf_outsection {
-  margin: 40px 0px 0px 0px;
   background-image: url(../images/footer-background.jpg);
   background-size: cover;
   background-position: center center;
@@ -1577,9 +1576,18 @@ body::-webkit-scrollbar-thumb {
 .register_background {
   background-image: url(../images/job-background1.jpg);
   background-size: cover;
-  background-position: top;
-  height: 80vh;
-  min-height:80vh;
+  background-position: top center;
+  height: auto;
+  padding: clamp(24px, 4vh, 48px) 0 clamp(48px, 8vh, 96px);
+}
+
+.footerdf_outsection {
+  position: relative;
+  z-index: 1;
+}
+.register_background {
+  position: relative;
+  z-index: 2;
 }
 
 .register_outsectionn {
