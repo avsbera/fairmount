@@ -590,11 +590,14 @@ body::-webkit-scrollbar-thumb {
 
 .srjobbox_outarea {
   background-color: #FFF;
-  margin: 30px 0px 0px 0px;
+  margin: 30px 0 0 0;
   width: 100%;
-  height: 60px;
   border-radius: 10px;
-  padding: 10px 10px 10px 10px;
+  padding: 12px; 
+}
+
+.srjobbox_outarea .row {
+  --bs-gutter-y: .5rem;  
 }
 
 .jtcbox_outarea {
@@ -629,22 +632,34 @@ body::-webkit-scrollbar-thumb {
 }
 
 .ppsearch_outarea {
-  margin: 30px 0px 0px 0px;
+  margin: 16px 0 0 0; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;    
 }
 
 .pches_textdesign {
   color: #000;
   font-size: 14px;
-  padding: 0px 20px 0px 0px;
+  padding: 0;
+  flex: 0 0 auto; 
 }
 
 .ppasrch_textdesign {
+  display: inline-flex; 
+  align-items: center;
+  white-space: nowrap;     
   background: #1967D2;
   color: #FFF;
   text-decoration: none;
   font-size: 13px;
   border-radius: 30px;
-  padding: 10px 27px;
+  padding: 8px 20px;        
+  line-height: 1;    
+}
+.ppasrch_textdesign:hover {
+  opacity: .9;
 }
 
 .ppasrch_textdesignmre {
