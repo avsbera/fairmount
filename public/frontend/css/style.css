@@ -545,6 +545,11 @@ body::-webkit-scrollbar-thumb {
   color: #000000 !important;
 }
 
+.navbar-toggler {
+  font-size: small;
+  padding: 5px;
+}
+
 /*===================================header design========================*/
 
 /*====================================banner design=======================*/
