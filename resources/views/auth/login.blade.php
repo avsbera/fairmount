@@ -7,7 +7,7 @@
 
 
 
-
+<main>
 <section class="register_background">
   <div class="container">
     <div class="row">
@@ -86,6 +86,7 @@
     </div>
   </div>
 </section>
+</main>
 
 
 
