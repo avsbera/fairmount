@@ -1,6 +1,6 @@
       <div class="container-fluid">
           <div class="row">
-              <div class="col-lg-12 footerdf_outsection">
+              <div class="col-lg-12 footerdf_outsection" style="margin: 0 !important;">
                   <div class="footerdf_outsection1">
                       <div class="container">
                           <div class="row">
