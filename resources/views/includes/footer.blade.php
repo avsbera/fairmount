@@ -72,7 +72,7 @@
                                 <div class="footermidfc_jxoutsection">
                                     <h2 class="ulinks_outsection">{{ __('Useful Links') }}</h2>
                                     <ul class="footer_gulnksj">
-                                        <li>
+                                        {{-- <li>
                                             <a href="{{ route('index') }}">
                                                 <i class="fa-solid fa-chevron-right"></i>
                                                 {{ __('Home') }}
@@ -95,7 +95,7 @@
                                                 <i class="fa-solid fa-chevron-right"></i>
                                                 {{ __('FAQs') }}
                                             </a>
-                                        </li>
+                                        </li> --}}
 
                                         {{-- Dynamic CMS pages shown in footer --}}
                                         @foreach($show_in_footer_menu as $footer_menu)
