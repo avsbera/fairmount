@@ -58,12 +58,12 @@
                                         <li><a href="{{ route('contact.us') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Contact Us')}}</a></li>
                                         <li class="postad"><a href="{{ route('post.job') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Post a Job')}}</a></li>
                                         <li><a href="{{ route('faq') }}"><i class="fa-solid fa-chevron-right"></i>{{__('FAQs')}}</a></li>
-                                        @foreach($show_in_footer_menu as $footer_menu)
+                                        {{-- @foreach($show_in_footer_menu as $footer_menu)
                                         @php
                                         $cmsContent = App\CmsContent::getContentBySlug($footer_menu->page_slug);
                                         @endphp
                                         <li class="{{ Request::url() == route('cms', $footer_menu->page_slug) ? 'active' : '' }}"><a href="{{ route('cms', $footer_menu->page_slug) }}"><i class="fa-solid fa-chevron-right"></i>{{ $cmsContent->page_title }}</a></li>
-                                        @endforeach
+                                        @endforeach --}}
                                     </ul>
                                 </div>
                             </div>
