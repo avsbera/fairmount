@@ -22,6 +22,10 @@
                     <!-- CENTER + RIGHT collapse -->
                     <div class="collapse navbar-collapse flex-lg-row" id="mainNav">
 
+                    <div class="d-lg-none text-end w-100 mb-2">
+                        <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#mainNav"></button>
+                    </div>
+
                       <!-- CENTER: primary nav -->
                       <ul class="navbar-nav nav-center mx-lg-auto my-2 my-lg-0">
                         <li class="nav-item {{ Request::url() == route('index') ? 'active' : '' }}">
