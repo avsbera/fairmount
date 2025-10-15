@@ -129,8 +129,8 @@
                                           <div class="col-lg-9 col-10">
                                               <div class="contactfstdownsection_outfooter">
                                                   <h2 class="cayun_textdesign">Call anytime</h2>
-                                                  <a href="tel: +91 0000000000" class="footercontact_lnktextdesign"> +91
-                                                      0000000000</a>
+                                                  <a href="tel: +91 82938 93001" class="footercontact_lnktextdesign"> +91
+                                                      82938 93001</a>
                                               </div>
                                           </div>
                                       </div>
@@ -145,8 +145,8 @@
                                           <div class="col-lg-9 col-10">
                                               <div class="contactfstdownsection_outfooter">
                                                   <h2 class="cayun_textdesign">Send email</h2>
-                                                  <a href="mailto:test@gmail.com"
-                                                      class="footercontact_lnktextdesign">test@gmail.com</a>
+                                                  <a href="mailto:info@fairmountjob.com"
+                                                      class="footercontact_lnktextdesign">info@fairmountjob.com</a>
                                               </div>
                                           </div>
                                       </div>
@@ -162,7 +162,9 @@
                                               <div class="contactfstdownsection_outfooter">
                                                   <h2 class="cayun_textdesign">Our Address</h2>
                                                   <p class="clicnfooter_addresstext">
-                                                      Kolkata
+                                                      Webel Bhavan, Moni Bhandar Building, 7th Floor, Block - EP & GP , Sector V, Bidhannagar, Salt Lake, Kolkata - 700091, West Bengal
+
+
                                                   </p>
                                               </div>
                                           </div>
