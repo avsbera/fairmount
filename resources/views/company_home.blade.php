@@ -30,7 +30,8 @@
                 <div class="userprofilealert">
                     <h5>
                         <i class="fas fa-check"></i> 
-                        {{_('Your account is active now, Start Posting Jobs.')}}
+                        {{ __('Your account is active now, Start Posting Jobs.') }}
+
                     </h5>
                 </div>
 
