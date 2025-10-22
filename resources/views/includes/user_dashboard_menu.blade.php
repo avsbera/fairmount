@@ -7,7 +7,7 @@
     $isExpired = $packageEndDate ? \Carbon\Carbon::parse($packageEndDate)->isPast() : true;
 ?>
 
-@if(!auth()->user()->is_featured || $isExpired)
+{{-- @if(!auth()->user()->is_featured || $isExpired)
     <div class="featuredprofile">
         <div class="packginfor">
             <h5><i class="fas fa-bolt"></i> {{$featured_package->package_title}}</h5>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-@endif
+@endif --}}
 
             <!-- Modal -->
             <div class="modal fade mypremodal" id="buyfeatured" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
