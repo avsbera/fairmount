@@ -11,6 +11,7 @@
         "php": "^8.2",
         "anhskohbo/no-captcha": "^3.5",
         "cakephp/chronos": "^3.0",
+        "cviebrock/eloquent-sluggable": "*",
         "guzzlehttp/guzzle": "^7.2",
         "intervention/image": "^2.7",
         "jrean/laravel-user-verification": "^11.0",

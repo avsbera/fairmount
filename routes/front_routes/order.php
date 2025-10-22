@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\RazorpayOrderController;
 
 
 /* * ******** OrderController ************ */
@@ -19,11 +20,10 @@ Route::get('stripe-order-form/{id}/{new_or_upgrade}', 'StripeOrderController@str
 Route::post('stripe-order-package', 'StripeOrderController@stripeOrderPackage')->name('stripe.order.package');
 Route::post('stripe-order-upgrade-package', 'StripeOrderController@stripeOrderUpgradePackage')->name('stripe.order.upgrade.package');
 
-Route::get('razorpay-order-form/{id}/{new_or_upgrade}', 'RazorpayOrderController@razorpayOrderForm')->name('razorpay.order.form');
-Route::post('razorpay-order-package', 'RazorpayOrderController@razorpayOrderPackage')->name('razorpay.order.package');
-Route::post('razorpay-verify-payment', 'RazorpayOrderController@verifyRazorpayPayment')->name('razorpay.verify.payment');
-
-
+Route::get('razorpay-order-form/{id}/{new_or_upgrade}', [RazorpayOrderController::class, 'razorpayOrderForm'])->name('razorpay.order.form');
+Route::post('razorpay-create-order', [RazorpayOrderController::class, 'createOrderAjax'])->name('razorpay.create.order');
+Route::post('razorpay-order-package', [RazorpayOrderController::class, 'razorpayOrderPackage'])->name('razorpay.order.package');
+Route::post('razorpay-verify-payment', [RazorpayOrderController::class, 'verifyRazorpayPayment'])->name('razorpay.verify.payment');
 
 Route::get('payu-order-package', 'PayuController@orderPackage')->name('payu.order.package');
 Route::get('payu-order-package-status/', 'PayuController@orderPackageStatus')->name('payu.order.package.status');

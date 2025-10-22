@@ -9,18 +9,20 @@ use App\Traits\CountryStateCity;
 use App\Traits\CommonUserFunctions;
 use Illuminate\Support\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Cviebrock\EloquentSluggable\Sluggable;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use CountryStateCity;
     use CommonUserFunctions;
+    use Sluggable;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','email_verified_at','verified'
+        'name', 'email', 'password','email_verified_at','verified','user_name'
     ];
     protected $dates = ['created_at', 'updated_at', 'date_of_birth', 'package_start_date', 'package_end_date'];
     /**
@@ -341,5 +343,14 @@ class User extends Authenticatable implements MustVerifyEmail
     public function countMessages($id)
     {
         return CompanyMessage::where('seeker_id', '=', $this->id)->where('company_id', '=', $id)->where('status', '=', 'unviewed')->where('type', '=', 'message')->count();
+    }
+     public function sluggable(): array
+    {
+        return [
+            'user_name' => [
+                'source' => 'name',
+                'onUpdate' => false,   // auto-update slug when name changes
+            ]
+        ];
     }
 }

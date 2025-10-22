@@ -2,6 +2,7 @@
 
 /* * ******** UserController ************ */
 Route::get('my-profile', 'UserController@myProfile')->name('my.profile');
+Route::get('check-username', 'UserController@checkUsername')->name('check.username');
 Route::put('my-profile', 'UserController@updateMyProfile')->name('my.profile');
 Route::get('build-resume', 'UserController@buildResume')->name('build.resume');
 Route::get('view-public-profile/{id}', 'UserController@viewPublicProfile')->name('view.public.profile');

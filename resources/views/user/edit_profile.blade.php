@@ -51,5 +51,44 @@
         $('body').removeAttr('style');    
     });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const userNameField = document.getElementById('user_name');
+    const statusField = document.getElementById('user_name_status');
+    const updateBtn = document.querySelector('button[type="submit"]');
+
+    let typingTimer;
+    const delay = 400; // ms delay after typing stops
+
+    userNameField.addEventListener('keyup', function() {
+        clearTimeout(typingTimer);
+        typingTimer = setTimeout(checkUserName, delay);
+    });
+
+    function checkUserName() {
+        const userName = userNameField.value.trim();
+        if (!userName) {
+            statusField.textContent = '';
+            updateBtn.disabled = false;
+            return;
+        }
+
+        fetch(`{{ route('check.username') }}?user_name=${encodeURIComponent(userName)}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.available) {
+                    statusField.textContent = '✅ Username available';
+                    statusField.style.color = 'green';
+                    updateBtn.disabled = false;
+                } else {
+                    statusField.textContent = '❌ Username already taken';
+                    statusField.style.color = 'red';
+                    updateBtn.disabled = true;
+                }
+            });
+    }
+});
+</script>
+
 
 @endpush

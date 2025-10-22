@@ -53,22 +53,25 @@ use RegistersUsers;
         $user->first_name = $request->input('first_name');
         $user->middle_name = $request->input('middle_name');
         $user->last_name = $request->input('last_name');
+        $user->name = $user->getName(); // ✅ set before save
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
         $user->is_active = 1;
         $user->verified = 0;
-        $user->save();
-        /*         * *********************** */
-        $user->name = $user->getName();
-        $user->update();
-        /*         * *********************** */
+        $user->save(); // ✅ now slug will be created automatically
+
         event(new Registered($user));
         event(new UserRegistered($user));
+
         $this->guard()->login($user);
+
         UserVerification::generate($user);
         UserVerification::send($user, 'User Verification', config('mail.recieve_to.address'), config('mail.recieve_to.name'));
-        return $this->registered($request, $user) ?: redirect($this->redirectPath());
+
+        return $this->registered($request, $user)
+            ?: redirect($this->redirectPath());
     }
+
     
     public function notVerified()
     {

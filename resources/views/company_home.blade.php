@@ -5,6 +5,7 @@
 <!-- Header start --> 
 
 @include('includes.header') 
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 <!-- Header end --> 
 

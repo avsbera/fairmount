@@ -10,6 +10,13 @@
       'NoCaptcha' => 'Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha',
     ),
   ),
+  'cviebrock/eloquent-sluggable' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Cviebrock\\EloquentSluggable\\ServiceProvider',
+    ),
+  ),
   'intervention/image' => 
   array (
     'providers' => 

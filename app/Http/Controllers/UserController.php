@@ -72,7 +72,7 @@ class UserController extends Controller
     public function viewPublicProfile($id)
     {
 
-        $user = User::findOrFail($id);
+        $user = User::where('user_name', $id)->firstOrFail();
         $profileCv = $user->getDefaultCv();
         
         return view('user.applicant_profile')
@@ -160,6 +160,8 @@ class UserController extends Controller
         $user->video_link = $request->video_link;
         $user->street_address = $request->input('street_address');
 		$user->is_subscribed = $request->input('is_subscribed', 0);
+        $user->user_name = $request->input('user_name');
+
 		
         $user->update();
 
@@ -342,6 +344,16 @@ public function fetchCandidatesHistory(Request $request)
         })
         ->make(true);
 }
+public function checkUsername(Request $request)
+{
+    $user_name = $request->query('user_name');
+    $exists = User::where('user_name', $user_name)
+        ->where('id', '!=', Auth::id()) // allow same user to keep their username
+        ->exists();
+
+    return response()->json(['available' => !$exists]);
+}
+
 
 
 

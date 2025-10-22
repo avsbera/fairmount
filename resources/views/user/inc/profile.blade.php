@@ -15,6 +15,15 @@
 			{!! Form::password('password', array('class'=>'form-control', 'id'=>'password', 'placeholder'=>__('Password'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'password') !!} </div>
     </div>
+    <div class="col-md-6">
+        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'user_name') !!}">
+            <label for="">{{__('User Name')}}</label>
+            {!! Form::text('user_name', null, ['class'=>'form-control', 'id'=>'user_name', 'placeholder'=>__('Choose a unique username')]) !!}
+            <small id="user_name_status"></small>
+            {!! APFrmErrHelp::showErrors($errors, 'user_name') !!}
+        </div>
+    </div>
+
 </div>
 
 <hr>

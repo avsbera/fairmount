@@ -48,16 +48,31 @@ class CompanyController extends Controller
     {
         return view('admin.company.index');
     }
+    // public function indexCompaniesHistory()
+    // {
+    //     $employerPackages = Package::where('package_for', 'employer')
+    // ->pluck('package_title', 'id')
+    // ->toArray();
+    //     $cvSearchPackages = Package::where('package_for', 'cv_search')
+    // ->pluck('package_title', 'id')
+    // ->toArray();
+    //     return view('admin.company.payment_history')->with('packages',$packages);
+    // }
     public function indexCompaniesHistory()
     {
         $employerPackages = Package::where('package_for', 'employer')
-    ->pluck('package_title', 'id')
-    ->toArray();
+            ->pluck('package_title', 'id')
+            ->toArray();
+
         $cvSearchPackages = Package::where('package_for', 'cv_search')
-    ->pluck('package_title', 'id')
-    ->toArray();
-        return view('admin.company.payment_history')->with('packages',$packages);
+            ->pluck('package_title', 'id')
+            ->toArray();
+
+        $packages = $employerPackages + $cvSearchPackages; // merge arrays
+
+        return view('admin.company.payment_history', compact('packages'));
     }
+
     public function fetchCompaniesHistory(Request $request)
     {
         $companies = Company::select('*');
