@@ -56,7 +56,7 @@
                                     <ul class="footer_gulnksj">
                                         <li><a href="{{ route('index') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Home')}}</a></li>
                                         <li><a href="{{ route('contact.us') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Contact Us')}}</a></li>
-                                        <li class="postad"><a href="{{ route('post.job') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Post a Job')}}</a></li>
+                                        {{-- <li class="postad"><a href="{{ route('post.job') }}"><i class="fa-solid fa-chevron-right"></i>{{__('Post a Job')}}</a></li> --}}
                                         <li><a href="{{ route('faq') }}"><i class="fa-solid fa-chevron-right"></i>{{__('FAQs')}}</a></li>
                                         {{-- @foreach($show_in_footer_menu as $footer_menu)
                                         @php

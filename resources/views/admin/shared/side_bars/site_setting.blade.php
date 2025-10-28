@@ -7,24 +7,37 @@
 </li> --}}
 
 
-<li class="nav-item  "> <a href="javascript:;" class="nav-link nav-toggle"> <i class="icon-wrench"></i> <span class="title">Static Content Widgets</span> <span class="arrow"></span> </a>
-    <ul class="sub-menu">
+@php
+    use App\Models\WidgetPages;
+    $w_pages = WidgetPages::where('status', 'active')->get();
+    $isWidgetActive = false;
 
-<?php 
+    if ($w_pages->count()) {
+        foreach ($w_pages as $w_p) {
+            if (request()->routeIs('admin.widgets_data') && request()->route('slug') == $w_p->slug) {
+                $isWidgetActive = true;
+                break;
+            }
+        }
+    }
+@endphp
 
-$w_pages = App\Models\WidgetPages::where('status','active')->get();
+<li class="nav-item {{ $isWidgetActive ? 'open' : '' }}">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="icon-wrench"></i>
+        <span class="title">Static Content Widgets</span>
+        <span class="arrow {{ $isWidgetActive ? 'open' : '' }}"></span>
+    </a>
 
-?>
-
-@if(null!==($w_pages))
-
-
-          @foreach($w_pages as $w_p)
-          <li class="nav-item  "> <a href="{{route('admin.widgets_data',$w_p->slug)}}" class="nav-link "> <span class="title">{{$w_p->title}}</span> </a> </li>
-          
-        
-          @endforeach 
-  @endif
-
+    <ul class="sub-menu" style="display: {{ $isWidgetActive ? 'block' : 'none' }}">
+        @if($w_pages->count())
+            @foreach($w_pages as $w_p)
+                <li class="nav-item {{ (request()->routeIs('admin.widgets_data') && request()->route('slug') == $w_p->slug) ? 'active' : '' }}">
+                    <a href="{{ route('admin.widgets_data', $w_p->slug) }}" class="nav-link">
+                        <span class="title">{{ $w_p->title }}</span>
+                    </a>
+                </li>
+            @endforeach
+        @endif
     </ul>
 </li>

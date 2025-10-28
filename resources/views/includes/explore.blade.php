@@ -11,10 +11,13 @@
                                 <p class="okbvc_ptextdesign">
                                     The primary purpose of describing your role and responsibilities to potential employers is to provide them with examples of what you achieved on the job and how you contributed overall to the company.
                                 </p>
-                                <button class="uyrbtn_gdesign">
-                                    Upload Your Resume
-                                    <i class="fa-solid fa-upload"></i>
-                                </button>
+                                <a href="{{ url('build-resume') }}">
+                                    <button class="uyrbtn_gdesign">
+                                        Upload Your Resume
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </a>
+
                             </div>
                         </div>
                         <div class="col-lg-6">

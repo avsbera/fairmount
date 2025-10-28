@@ -34,7 +34,7 @@
 
                         @if(Auth::guard('company')->check())
                           <li class="nav-item {{ Request::url() == url('/job-seekers') ? 'active' : '' }}">
-                            <a href="{{ url('/job-seekers') }}" class="nav-link">Browse Jobs</a>
+                            <a href="{{ url('/job-seekers') }}" class="nav-link">Find Candidate</a>
                           </li>
                         @else
                           <li class="nav-item {{ Request::url() == url('/search-jobs') ? 'active' : '' }}">
@@ -42,9 +42,9 @@
                           </li>
                         @endif
 
-                        <li class="nav-item {{ Request::url() == url('/pricing') ? 'active' : '' }}">
+                        {{-- <li class="nav-item {{ Request::url() == url('/pricing') ? 'active' : '' }}">
                           <a href="{{ url('/pricing') }}" class="nav-link">Pricing</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item {{ Request::url() == route('blogs') ? 'active' : '' }}">
                           <a href="{{ route('blogs') }}" class="nav-link">News</a>
                         </li>
@@ -63,7 +63,7 @@
                             <ul class="dropdown-menu dropdown-menu-end">
                               <li><a href="{{ route('home') }}" class="dropdown-item"><i class="fa fa-tachometer"></i> Dashboard</a></li>
                               <li><a href="{{ route('my.profile') }}" class="dropdown-item"><i class="fa fa-user"></i> My Profile</a></li>
-                              <li><a href="{{ route('view.public.profile', Auth::user()->id) }}" class="dropdown-item"><i class="fa fa-eye"></i> View Public Profile</a></li>
+                              <li><a href="{{ route('view.public.profile', Auth::user()->user_name) }}" class="dropdown-item"><i class="fa fa-eye"></i> View Public Profile</a></li>
                               <li><a href="{{ route('my.job.applications') }}" class="dropdown-item"><i class="fa fa-desktop"></i> My Job Applications</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li>
@@ -351,7 +351,7 @@
                     aria-hidden="true"></i> {{ __('Dashboard') }}</a> </li>
         <li class="nav-item"><a href="{{ route('my.profile') }}" class="nav-link"><i class="fa fa-user"
                     aria-hidden="true"></i> {{ __('My Profile') }}</a> </li>
-        <li class="nav-item"><a href="{{ route('view.public.profile', Auth::user()->id) }}" class="nav-link"><i
+        <li class="nav-item"><a href="{{ route('view.public.profile', Auth::user()->user_name) }}" class="nav-link"><i
                     class="fa fa-eye" aria-hidden="true"></i> {{ __('View Public Profile') }}</a> </li>
         <li><a href="{{ route('my.job.applications') }}" class="nav-link"><i class="fa fa-desktop"
                     aria-hidden="true"></i> {{ __('My Job Applications') }}</a> </li>
